@@ -20,19 +20,19 @@ const HeroSlider = () => {
   };
   const imgs = [frame, frame, frame, frame];
   return (
-    <div className="relative mt-[54px]">
-      <Slider {...settings} className=" w-[1060px] h-[440px]">
+    <div className="relative mt-[54px] mx-auto">
+      <Slider {...settings} className=" 2xl:w-[1060px] lg:h-[440px] lg:w-full ">
         {imgs.map((item, index) => (
           <div
             key={index}
-            className="rounded-[40px] overflow-hidden w-[1060px] h-[440px]"
+            className="rounded-[40px] overflow-hidden 2xl:w-[1060px] 2xl:h-[440px] lg:w-full "
           >
             <Image
               src={item}
               alt="frame"
-              className="h-full w-full"
-              width={1060}
-              height={440}
+              className="max-h-full max-w-full mx-auto"
+              // width={1060}
+              // height={440}
             />
           </div>
         ))}

@@ -7,7 +7,7 @@ import Footer from "./components/Footer";
 
 export default function Home() {
   return (
-    <div className="bg-dark ">
+    <div className="bg-dark overflow-hidden ">
       <Header />
       <Hero />
       <div className="bg-light">

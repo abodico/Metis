@@ -4,10 +4,11 @@ import Image from "next/image";
 import twitter from "../../public/assets/Union.svg";
 const SeasonTwo = () => {
   return (
-    <div className="pt-[117px] pb-[104px] container">
-      <div className="bg-white px-[40px] py-8 flex items-center justify-between rounded-[30px] cursor-pointer">
-        <div className="flex gap-5 items-center">
-          <h4 className="text-black text-[30px] font-semibold">
+    <div className="lg:pt-[117px] pt-24 | lg:pb-[104px] pb-48 | container">
+      {/* white-card */}
+      <div className="bg-white | lg:px-[40px] px-7 | lg:h-[100px] h-[90px] | flex items-center justify-between rounded-[30px] cursor-pointer">
+        <div className="flex | lg:gap-5 | items-center max-w-[60%] ">
+          <h4 className="text-black break-words | lg:text-[30px] text-2xl | font-semibold">
             Share on Twitter X
           </h4>
           <Image
@@ -18,6 +19,7 @@ const SeasonTwo = () => {
             alt="right-arrow"
           />
         </div>
+        {/* twitter-logo */}
         <Image
           src={twitter}
           className="w-10 h-9"
@@ -26,11 +28,14 @@ const SeasonTwo = () => {
           height={37}
         />
       </div>
-      <div className="text-center text-white mt-[83px]">
-        <h2 className=" opacity-25 font-bold text-[66px] leading-[77px]">
+      {/* text-info */}
+      <div className="text-center text-white | lg:mt-[83px] mt-20 ">
+        <h2 className=" opacity-25 font-bold | lg:text-[66px] text-4xl | lg:leading-[77px] leading-[28px]">
           Season Two
         </h2>
-        <h3 className="font-semibold text-[26px]">COMING SOON</h3>
+        <h3 className="font-semibold | lg:text-[26px] text-[20px] | lg:mt-0 mt-2">
+          COMING SOON
+        </h3>
       </div>
     </div>
   );

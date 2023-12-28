@@ -35,7 +35,14 @@ const Footer = () => {
       link: "",
     },
   ];
-  const list1 = ["Platform", "Knowledge", "Carrers", "Search", "Subscribe"];
+  const list1 = [
+    "Platform",
+    "Knowledge",
+    "Carrers",
+    "Search",
+    "Subscribe",
+    "Brand Assets",
+  ];
   const list2 = [
     "Community",
     "Company",
@@ -44,18 +51,19 @@ const Footer = () => {
     "Contact",
   ];
   return (
-    <div className="container pt-[54px] pb-[157px]">
+    <div className="container pt-[54px] lg:pb-40 pb-32">
       {/* logo & icons */}
       <div className="flex items-center justify-between">
+        {/* logo */}
         <Image
           src={logo}
-          className="w-[197px] h-10"
+          className="lg:w-[197px] w-28 | lg:h-10"
           alt="logo"
           width={197}
           height={42}
         />
-        {/* icons */}
-        <div className="flex items-center gap-2.5">
+        {/* lg-icons */}
+        <div className=" items-center gap-2.5 lg:flex hidden">
           {icons.map((item, index) => (
             <Link href={item.link} key={index}>
               <Image
@@ -70,7 +78,8 @@ const Footer = () => {
         </div>
       </div>
       {/* lists */}
-      <div className="flex items-center gap-36 text-white text-[13px] font-poppins mt-[47px]">
+      <div className="flex items-start | lg:gap-36 gap-16 | text-white text-[13px] font-poppins mt-[47px]">
+        {/* first-list */}
         <ul className="flex flex-col gap-4">
           {list1.map((item, index) => (
             <li key={index} className="">
@@ -78,6 +87,7 @@ const Footer = () => {
             </li>
           ))}
         </ul>
+        {/* second-list */}
         <ul className="flex flex-col gap-4">
           {list2.map((item, index) => (
             <li key={index} className="">
@@ -85,6 +95,20 @@ const Footer = () => {
             </li>
           ))}
         </ul>
+      </div>
+      {/* mobile-icons */}
+      <div className=" items-center gap-2.5 lg:hidden flex mt-8">
+        {icons.map((item, index) => (
+          <Link href={item.link} key={index}>
+            <Image
+              src={item.icon}
+              className="w-8 h-8"
+              alt="icon"
+              width={50}
+              height={50}
+            />
+          </Link>
+        ))}
       </div>
     </div>
   );

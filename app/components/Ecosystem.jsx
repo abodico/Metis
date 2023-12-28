@@ -55,18 +55,19 @@ const Ecosystem = () => {
     },
   ];
   return (
-    <div className="container pb-[105px] ">
-      <h2 className="text-white text-[46px] font-bold text-center pt-[111px]">
+    <div className="container | lg:pb-36 pb-24 ">
+      <h2 className="text-white | lg:text-[46px] text-[36px] | font-bold text-center | lg:pt-[111px] pt-20">
         Ecosystem dApps
       </h2>
-      <div className="flex flex-wrap gap-5 mt-[87px]">
+      <div className="flex flex-wrap gap-5 | lg:mt-[87px] mt-7">
         {cards.map((item, index) => (
           <div
             key={index}
-            className={`${item.gradient} overflow-hidden w-[calc(50%-10px)] h-[140px] rounded-[30px] flex items-center relative`}
+            className={`${item.gradient} overflow-hidden | lg:w-[calc(50%-10px)] w-full | lg:h-[140px] h-28  | rounded-[30px] flex items-center relative`}
           >
-            <div className="ml-[40px]">
-              <h3 className="text-white text-[30px] font-semibold">
+            {/* text */}
+            <div className="lg:ml-10 ml-9">
+              <h3 className="text-white | lg:text-[30px] text-[24px] | font-semibold">
                 {item.title}
               </h3>
               <Image
@@ -75,11 +76,13 @@ const Ecosystem = () => {
                 alt="right-arrow"
               />
             </div>
+            {/* card-image */}
             <Image
               src={item.image}
               alt={item.title}
-              className="absolute bottom-0 right-0"
+              className="absolute bottom-0 right-0 h-full w-auto"
             />
+            {/* if-completed-overlay */}
             <div
               className={`${
                 !item.completed && "hidden"

@@ -10,7 +10,7 @@ const Header = () => {
   const list = "Developer Ecosystem Governance Company Bridge More".split(" ");
 
   return (
-    <div className="flex items-center justify-between lg:px-[45px] p-4 lg:py-5  ">
+    <div className="flex items-center justify-between xl:px-[45px]  p-3 lg:py-5  ">
       {/* logo */}
       <div className="lg:w-[123px] lg:h-[44px] w-9 h-9 flex items-center">
         {/* lg-logo */}
@@ -31,16 +31,16 @@ const Header = () => {
         />
       </div>
       {/* list & bars & dark-mode-button  */}
-      <div className="flex items-center lg:gap-5 gap-1">
+      <div className="flex items-center xl:gap-5 lg:gap-2 gap-1">
         {/* the ul is block in lg devices and hidden otherwise */}
-        <ul className="text-white text-[15px] gap-4 lg:flex hidden">
+        <ul className="text-white text-[15px] xl:gap-4 gap-2 lg:flex hidden">
           {list.map((item, index) => (
             <li key={index} className="cursor-pointer font-medium">
               {item}
             </li>
           ))}
         </ul>
-        <div className="lg:w-[400px] w-[275px] | lg:h-[50px] h-10 | bg-transparent | relative | rounded-[40px] | overflow-hidden | bg-light | lg:text-[18px] text-xs ">
+        <div className="xl:w-[400px] lg:w-[370px]  w-[275px] | lg:h-[50px] h-10 | bg-transparent | relative | rounded-[40px] | overflow-hidden | bg-light | lg:text-[18px] text-xs ">
           {/* blue-bar */}
           <div className="w-1/2 h-full bg-[#00D2FF] text-black flex items-center font-medium gap-2 | pl-4  ">
             <Image
@@ -53,7 +53,7 @@ const Header = () => {
             <p className="font-poppins "> 36 Metis</p>
           </div>
           {/* white-bar */}
-          <div className="w-1/2 h-full left-[32%] bg-white text-black flex items-center font-medium | lg:gap-3 gap-1.5 | pl-2 rounded-[40px] absolute top-0  ">
+          <div className="w-1/2 h-full left-[31%] bg-white text-black flex items-center font-medium | lg:gap-3 gap-1.5 | pl-2 rounded-[40px] absolute top-0  ">
             <div className=" lg:w-[34px] w-[30px] | lg:h-[34px] h-[30px] | rounded-full border-[3px] box-border border-r-[#00d2ff] border-y-black border-l-black flex items-center text-center -rotate-[45deg]">
               <div className="font-poppins | lg:text-[13px] text-[10px] | relative | lg:w-[34px] w-[30px] | rotate-[45deg] ">
                 XP

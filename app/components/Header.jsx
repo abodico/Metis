@@ -8,7 +8,6 @@ import arrow from "../../public/assets/Vector 94.svg";
 import mobileLogo from "../../public/assets/mobileLogo.svg";
 const Header = () => {
   const list = "Developer Ecosystem Governance Company Bridge More".split(" ");
-
   return (
     <div className="flex items-center justify-between xl:px-[45px]  p-3 lg:py-5  ">
       {/* logo */}
